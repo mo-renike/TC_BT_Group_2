@@ -25,4 +25,4 @@ Please review the checklist before submitting:
 
 ### 🔗 Related Issues or Tasks
 
-<!-- e.g., Closes #12, Implements Task 3 from Trello -->
+<!-- e.g., Closes #12, Implements Task 3  -->
