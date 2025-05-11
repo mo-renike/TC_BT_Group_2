@@ -22,4 +22,4 @@ This BMI Calculator API is a tool built using **Node.js** and **Express**. It al
 git clone https://github.com/mo-renike/TC_BT_Group_2.git
 cd TC_BT_Group_2
 npm install
-npm start
+
