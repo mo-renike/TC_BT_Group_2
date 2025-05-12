@@ -1,4 +1,5 @@
 import express from 'express';
+import { calculateBMI, getCategory  } from "./TC_BT_Group_2/routelaye1.js";
 const app = express();
 const PORT = 3000;
 
