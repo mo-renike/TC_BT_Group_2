@@ -37,7 +37,7 @@ BMI = 70 / (1.75 × 1.75) = **22.86**
 | 25.0 – 29.9    | Overweight     |
 | 30.0 and above | Obese          |
 
----
+
 
 ## Installation
 To run the project locally:
@@ -56,6 +56,7 @@ npm install
 4. **Start the development server:**
 ```bash
 npm start
+
 
 
 
