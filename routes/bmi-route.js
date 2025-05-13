@@ -1,10 +1,11 @@
 const express = require('express');
 const router = express.Router();
 
-const { calculateBmiGet } = require('../controllers/bmiController');
+// const { calculateBmiGet } = require('../controllers/bmiController');
 
-router.get('/bmi', calculateBmiGet);
+router.get('/bmi',() => {
+    console.log("bmiRoute")
+})
 
 
-module.exports = router;
-
+export default router;

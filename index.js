@@ -1,5 +1,5 @@
 import express from 'express';
-const bmiRoute = require("./routes/bmi-route")
+import { bmiRoute } from "./routes/bmi-route"
 const app = express();
 const PORT = 3000;
 
@@ -14,7 +14,7 @@ app.get('/friend', (req, res) => {
 	res.send('Hello friend');
 });
 
-app.use("/bmi", bmiRoute )
+app.use("/", bmiRoute )
 app.listen(PORT, () => {
 	console.log(`Server is running on http://localhost:${PORT}`);
 });
