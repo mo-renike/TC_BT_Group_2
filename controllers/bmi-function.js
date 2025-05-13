@@ -1,13 +1,5 @@
 function calBMI(unit, weight, height) {
-  // Validate all the input types i.e weight and height
-  if (typeof weight !== 'number' || typeof height !== 'number' ||
-      isNaN(weight) || isNaN(height)) {
-    return { error: 'Weight and height must be valid numbers.' };
-  }
-  // Validate to make sure there is no negative number
-  if (weight <= 0 || height <= 0) {
-    return { error: 'Weight and height must be greater than zero.' };
-  }
+
 
   // Calculation of the BMI in either metric or imperial unit
   let bmi;
