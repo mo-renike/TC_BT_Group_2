@@ -1,3 +1,4 @@
+import calBMI from './controllers/bmi-function.js';
 import express from 'express';
 import bmiRoutes from './routes/bmiRoute.js';
 
