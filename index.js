@@ -1,6 +1,6 @@
 
 import express from 'express';
-import bmiRoutes from './routes/bmi-route.js';
+import bmiRoutes from './routes/bmiRoute.js';
 
 const app = express();
 const PORT = 3000;
