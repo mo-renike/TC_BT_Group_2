@@ -8,7 +8,13 @@ This BMI Calculator API is a tool built using **Node.js** and **Express**. It al
 - Accepts height and weight as inputs (in metric or imperial units)
 - Calculates BMI using the standard formula
 - Returns both the BMI value and the health category (e.g., Normal weight, Overweight)
-- Supports both GET and POST requests
+- Supports **GET** and **POST** requests
+
+## Features
+- Includes input validation and structured error handling
+- Modular code structure for scalability
+- Deployed online for live testing
+
 
 ## BMI Formula
 
@@ -56,8 +62,53 @@ npm install
 4. **Start the development server:**
 ```bash
 npm start
----
+```
+5. **The server will run on**:
+```bash
+http://localhost:3000
+```
+## API Usage
+- GET `/bmi`
+- **Example Request:**
+```bash
+GET /bmi?weight=70&height=1.75
+```
+**Response:**
+```bash
+{
+  "bmi": 22.86,
+  "category": "Normal weight"
+}
+```
+- POST `/bmi`
+Request Body:
+```bash
+{
+  "weight": 70,
+  "height": 1.75
+}
+```
+**Response:**
+```bash
+{
+  "bmi": 22.86,
+  "category": "Normal weight"
+}
+```
+## Error Handling
+- The API returns a `400 Bad Request` response for missing or invalid inputs.
+- **Example Error Response:**
+```bash
+{
+  "error": "Invalid input: weight and height must be positive numbers."
+}
+```
+## Testing
+- Use Postman to test the endpoints.
 
+## Deployment
+- Deployed using Render / Vercel / Railway
+- Visit the live endpoints using the same GET or POST methods
 
 
 
