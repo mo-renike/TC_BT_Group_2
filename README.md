@@ -69,7 +69,7 @@ http://localhost:3000
 ```
 ## API Usage
 - GET `/bmi`
-**Example Request:**
+- **Example Request:**
 ```bash
 GET /bmi?weight=70&height=1.75
 ```
@@ -97,7 +97,7 @@ Request Body:
 ```
 ## Error Handling
 - The API returns a `400 Bad Request` response for missing or invalid inputs.
-**Example Error Response:**
+- **Example Error Response:**
 ```bash
 {
   "error": "Invalid input: weight and height must be positive numbers."
