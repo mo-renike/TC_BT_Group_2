@@ -20,4 +20,4 @@ function validateBMI (req, res, next) {
     next();
 }
 
-module.exports = validateBMI;
+export default validateBMI;
