@@ -5,7 +5,7 @@ import bmiRoutes from './routes/bmi-route.js';
 const app = express();
 const PORT = 3000;
 
-app.use(express.json());
+app.use(express.json()); // Middleware to parse JSON bodies
 app.use('/', bmiRoutes);
 
 app.listen(PORT, () => {
