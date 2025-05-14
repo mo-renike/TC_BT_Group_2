@@ -12,7 +12,7 @@ function validateBMI(req, res, next) {
   if (!unit || !weight || !height) {
     return res
       .status(400)
-      .json({ error: "Weight and Height values are required." });
+      .json({ error: "Unit, Weight and Height values are required." });
   }
 
   // This checks if the inputted values are numbers
