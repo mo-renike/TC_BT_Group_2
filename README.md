@@ -71,7 +71,7 @@ http://localhost:3000
 - GET `/bmi`
 - **Example Request:**
 ```bash
-GET /bmi?weight=70&height=1.75
+GET /bmi?unit=imperial&weight=70&height=1.75
 ```
 **Response:**
 ```bash
@@ -84,6 +84,7 @@ GET /bmi?weight=70&height=1.75
 Request Body:
 ```bash
 {
+  "unit": "imperial",
   "weight": 70,
   "height": 1.75
 }
