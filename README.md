@@ -19,14 +19,14 @@ This BMI Calculator API is a tool built using **Node.js** and **Express**. It al
 ## BMI Formula
 
 - **Metric units**:  
-  
-  BMI = weight (kg) / (height (m))^2
-  
+  \[
+  \text{BMI} = \frac{\text{weight (kg)}}{[\text{height (m)}]^2}
+  \]
 
 - **Imperial units**:  
-  
-  BMI = weight (lb) * 703 / (height (in))^2
-  
+  \[
+  \text{BMI} = \frac{\text{weight (lb)} \times 703}{[\text{height (in)}]^2}
+  \]
 
 **Example**:  
 If a person weighs 70 kg and is 1.75 m tall:  
@@ -71,9 +71,7 @@ http://localhost:3000
 - GET `/bmi`
 - **Example Request:**
 ```bash
-
-GET /bmi?unit=imperial&weight=70&height=1.75
->>>>>>> dev
+GET /bmi?unit=metric?weight=70&height=1.75
 ```
 **Response:**
 ```bash
@@ -86,7 +84,6 @@ GET /bmi?unit=imperial&weight=70&height=1.75
 Request Body:
 ```bash
 {
-  "unit": "imperial",
   "weight": 70,
   "height": 1.75
 }
