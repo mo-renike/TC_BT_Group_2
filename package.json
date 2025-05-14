@@ -14,7 +14,6 @@
   "license": "ISC",
   "dependencies": {
     "express": "^5.1.0",
-    // "tc_bt_group_2": "file:"
   },
   "devDependencies": {
     "nodemon": "^3.1.10"
