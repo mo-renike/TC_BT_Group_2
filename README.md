@@ -71,9 +71,7 @@ http://localhost:3000
 - GET `/bmi`
 - **Example Request:**
 ```bash
-
-GET /bmi?unit=imperial&weight=70&height=1.75
-
+GET /bmi?unit=metric?weight=70&height=1.75
 ```
 **Response:**
 ```bash
@@ -86,7 +84,6 @@ GET /bmi?unit=imperial&weight=70&height=1.75
 Request Body:
 ```bash
 {
-  "unit": "imperial",
   "weight": 70,
   "height": 1.75
 }
@@ -110,7 +107,12 @@ Request Body:
 - Use Postman to test the endpoints.
 
 ## Deployment
-- Deployed using Render / Vercel / Railway
+  ### Deployed using Render
+    - Before deployment, confirmed the working branch is up to date
+    - Confirmed the package.json file with proper scripts are defined
+    - Import the repository **TC_BT_Group_2** on Render
+  ### Deployment URL
+    -https://tc-bt-group-2-hixj.onrender.com/bmi?unit=imperial&weight=154&height=68
 - Visit the live endpoints using the same GET or POST methods
 
 
