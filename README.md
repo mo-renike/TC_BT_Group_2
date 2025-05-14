@@ -73,7 +73,7 @@ http://localhost:3000
 ```bash
 
 GET /bmi?unit=imperial&weight=70&height=1.75
->>>>>>> dev
+
 ```
 **Response:**
 ```bash
