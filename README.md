@@ -107,12 +107,22 @@ Request Body:
 }
 ```
 ## Testing
-- Use Postman to test the endpoints.
+- Used Postman to test the BMI calculation API for both `GET` and `POST` requests.
+
+| Test Case             | Description                            | Sample Input (JSON)                                         | Expected Result                                      | Screenshot                                                                    |
+| --------------------- | -------------------------------------- | ----------------------------------------------------------- | ---------------------------------------------------- | ----------------------------------------------------------------------------- |
+| ✅ **Correct Fields**  | Valid `metric` input with correct data | `{ "unit": "metric", "weight": 65, "height": 1.83 }`        | `bmi: 19.41`, category: `"Normal weight"`            | <img src="./screenshots/post_requests_tests/correct-fields.jpg" width="400"/>  |
+| ❌ **Empty Fields**    | All fields empty or blank strings      | `{ "unit": "", "weight": "", "height": "" }`                | `400 Bad Request`: Unit, weight and height are required               | <img src="./screenshots/get_requests_tests/empty-fields.jpg" width="400"/>    |
+| ❌ **Invalid Values**  | Weight or height is not a number       | `{ "unit": "metric", "weight": "heavy", "height": "tall" }` | `400 Bad Request`: Weight and height must be numbers | <img src="./screenshots/get_requests_tests/invalid-values.jpg" width="400"/>  |
+| ❌ **Invalid Unit**    | Unit is not `metric` or `imperial`     | `{ "unit": "abc", "weight": 70, "height": 1.75 }`           | `400 Bad Request`: Unit must be either `metric` or `imperial`                 | <img src="./screenshots/get_requests_tests/invalid-unit.jpg" width="400"/>    |
+| ❌ **Negative Values** | Negative weight or height              | `{ "unit": "metric", "weight": -70, "height": 1.75 }`       | `400 Bad Request`: Weight and height inputted values must be positive    | <img src="./screenshots/get_requests_tests/negative-values.jpg" width="400"/> |
+| ❌ **Zero Values**     | Zero weight or height                  | `{ "unit": "metric", "weight": 0, "height": 0 }`            | `400 Bad Request`: Weight and height inputted values must be positive    | <img src="./screenshots/get_requests_tests/zero-values.jpg" width="400"/>     |
+| ❌ **Missing Values**  | Missing `weight` field                 | `{ "unit": "metric", "height": 1.75 }`                      | `400 Bad Request`: Unit, weight and height are required               | <img src="./screenshots/get_requests_tests/missing-field.jpg" width="400"/>   |
+
+
+
+
 
 ## Deployment
 - Deployed using Render / Vercel / Railway
 - Visit the live endpoints using the same GET or POST methods
-
-
-
-
